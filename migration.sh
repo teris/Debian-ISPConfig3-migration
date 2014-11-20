@@ -74,6 +74,7 @@ function db_migration {
   clear
   echo "Backup einspielen........................................................................"
   echo "Bitte geben Sie das MySql-Passwort für den Benuter ROOT ein:............................."
+  read mysql2
   mysql -u root -p$mysql2 < /root/mysql/fulldump.sql
   clear
   echo "Führe MySql Check durch.................................................................."
