@@ -67,7 +67,7 @@ function db_migration {
   echo "Erstelle Datenbank Backup................................................................"
   echo "Bitte geben Sie das MySql-Passwort für den Benutzer ROOT auf dem Server $main_server ein:"
   read mysqlext
-  ssh $main_server "mysqldump -u root -p$mysqlext --all-databases > fulldump.sql"
+  ssh $main_server "mysqldump -u root -p$mysqlext --all-databases > /root/mysql/fulldump.sql"
   clear
   echo "Kopieren des Backups....................................................................."
   rsync $common_args $main_server:/root/mysql/ /root/mysql/
