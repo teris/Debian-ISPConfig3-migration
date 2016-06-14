@@ -143,7 +143,9 @@ function files_migration {
   echo "############################################################"
   rsync $common_args $main_server:/var/backup/ /var/backup
   rsync $common_args $main_server:/etc/passwd /root/old-server/
+  rsync $common_args $main_server:/etc/shadow /root/old-server/
   rsync $common_args $main_server:/etc/group  /root/old-server/
+  rsync $common_args $main_server:/etc/gshadow  /root/old-server/
   echo "############################################################"
   echo "############################################################"
   menu
